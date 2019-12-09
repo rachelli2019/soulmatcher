@@ -1,0 +1,119 @@
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>Personality Test Results</title>
+
+        <style>
+        body {
+            background-image: url(https://media.giphy.com/media/l3vR00nTQgYaUoPfi/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+        </style>
+        <!-- gif from https://giphy.com/gifs/vaporwave-chillwave-dreamwave-TgmSMsUvvRfbivssMz/links; background image html style code from https://www.w3schools.com/html/html_images_background.asp -->
+
+    </head>
+
+    <body>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myDIV");
+          var y = document.getElementById("nextbutton")
+          if (x.style.display === "none" && y.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "block";
+          } else {
+            x.style.display = "none";
+            y.style.display = "none";
+          }
+        }
+        </script>
+        </div>
+        <div id="myDIV" style="display:none">
+            <h1 class="testresults">YOU ARE: </h1>
+            <h1 class="special">{{personalitytype}}</h1> <div class="desc">{{description}}</div></h1>
+        </div>
+        <style>
+            .reveal {
+                height:180px;
+                width:800px;
+                margin: -45px -389px;
+                position:fixed;
+                top:50%;
+                left:50%;
+                font-size: 50px;
+                font-family: "Raleway", sans-serif;
+            }
+            .testresults {
+                color: white;
+                margin: -400px -110px;
+                position:fixed;
+                top:50%;
+                left:50%;
+                font-size: 50px;
+                font-family: "Raleway", sans-serif;
+            }
+            .desc {
+                color: black;
+                margin: -205px -390px;
+                position:fixed;
+                top:50%;
+                left:50%;
+                font-size: 20px;
+                font-family: "Raleway", sans-serif;
+                text-align: center;
+                background: #ffffff;
+                opacity: 0.8;
+            }
+            .special {
+                color: white;
+                margin: 0;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 75px;
+                font-family: "Times New Roman", serif;
+                font-weight: bold;
+                text-align: center;
+            }
+            .next {
+                height:90px;
+                width:400px;
+                margin: 150px -200px;
+                position:fixed;
+                top:50%;
+                left:50%;
+                font-size: 25px;
+                font-family: "Raleway", sans-serif;
+            }
+            div {
+              width: 800px;
+              padding: 20px;
+              margin: 20px;
+            }
+        </style>
+        <button onclick="myFunction()" class="reveal">Reveal my personality!</button>
+        <div>
+        <div id="nextbutton" style="display:none">
+        <form action="/dealbreaker" method="get">
+            <button class="next">Let's find your perfect partner!</button>
+        </form>
+        </div>
+    </body>

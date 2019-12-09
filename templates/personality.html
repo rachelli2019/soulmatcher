@@ -1,0 +1,497 @@
+<html>
+	<head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/styles.css" rel="stylesheet">
+		<link href="/static/icon.ico" rel="icon">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>Soul Matcher</title>
+
+        <style>
+        body {
+            /* gif from https://giphy.com/gifs/gustavo-loop-kidmograph-T9lWudzRdXIE8/links */
+            background-image: url(https://media.giphy.com/media/l3vRjkliOdY22VlS0/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+
+    </head>
+
+
+<!-- https://bootsnipp.com/snippets/DVv0a is the source-->
+    <div class="form">
+	<h2>Personality Test</h2>
+	<p>
+
+	</p>
+
+
+	<input id="one" type="radio" name="stage" checked="checked" />
+	<input id="two" type="radio" name="stage" />
+	<input id="three" type="radio" name="stage" />
+	<input id="four" type="radio" name="stage" />
+	<input id="five" type="radio" name="stage" />
+	<input id="six" type="radio" name="stage" />
+
+	<div class="stages">
+		<label for="one">1</label>
+		<label for="two">2</label>
+		<label for="three">3</label>
+		<label for="four">4</label>
+		<label for="five">5</label>
+		<label for="six">6</label>
+	</div>
+
+	<span class="progress"><span></span></span>
+	<!-- Outline used from the following site https://codepen.io/efo05/pen/KoQxNe.html-->
+	<div class="panels">
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "1 on step 1">
+				<h4>You are THE MAN. Note: you do not need to be a man to answer this question.</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="1">True</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="-1">False</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="0">What is THE MAN?</label>
+			</form>
+		</div>
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "2 on step 1">
+				<h4>It is a Friday night. You have a big squad to hang with.</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="1">True</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="-1">False</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="0">Kinda</label>
+			</form>
+		</div>
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "3 on step 1">
+				<h4>If it was up to you, you’d want to ______ with your free night</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="0">Chill with your group, maybe play boardgames, watch a TV show and just chill </label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-1">Get rest or study to get ahead</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-2">Chill with yourself, and do things that you like to do. By yourself</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="2">PARTY</label>
+			</form>
+		</div>
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "4 on step 1">
+				<h4>Your squad decides to go to a crazy party (Strobe lights, Loud music, 100+ people, etc.). You are…</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="1">Very excited!</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="0">Not interested...</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-1">I do not like those types of parties.</label>
+			</form>
+		</div>
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "5 on step 1">
+				<h4>You’re on the way to the party and your group is surrounded by a bunch of people who are also going to the party. Do you…</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="1">Stay tight and hang with the bois</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="2">Try to talk to the people you don’t know</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="4">Try to make a lifelong friend with the people you meet on the walk</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-1">Only talk if you are talked to</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-2">Try not to talk to the new people… or your people</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-3">I DO NOT LIKE PARTIES.</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="3">Flirt with the person you think is cutest</label>
+			</form>
+		</div>
+		<div data-panel="one" data-toggle="buttons">
+			<form name = "6 on step 1">
+			<h4>You’re at the party. Are you…</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="2"> In your element</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-1">Loathing every second</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="1">Happy because you’re with your friends</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="0">Not happy, not sad, just ok</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-1">Wishing you were in your room doing your own thing</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="-2">In the bathroom trying to avoid the craziness and calculating your way out</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" id="q" value="2">Trying to get with the most attractive person you see</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "1 on step 2">
+				<h4>Do you enjoy “late night talks”?</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Yes! Of any kind</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="2">Yes! Especially when my friends and I are delving into abstract theories</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Yes! Especially when my friends and I are talking about our unique perceptions of our shared experiences</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="0">Yes! Especially when we gossip all night</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">No… I want to sleep!</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-2">No… I don’t like talking to people for THAT long or in THAT way</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-3">No… The people that can stay up all night talking and theorizing annoy me</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "2 on step 2">
+				<h4>You are a college student trying to figure out what to major in and what career path to go down. Should you…</h4>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-2">Already have everything planned out about that stuff since high school… or before</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Pick the most practical major/career where you get the most money in the shortest amount of time</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Try to find the major/career that makes you “happiest” regardless of pay</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="2">Question the meaning of happiness and your ability to determine your long-term happiness based on your current choices</label>
+				<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Don’t think about major or career and just try to stay in the moment for as long as possible</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "3 on step 2">
+			<h4>You have an essay due in a week. Do you…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Structure the week in order to prevent procrastination</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Procrastinate like crazy</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "4 on step 2">
+			<h4>You have an essay due in a week. Do you…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Write the essay to get it done</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Think about the deeper concepts behind what you’re writing about</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="2">Think about the purpose behind the essay and how completing the assignment is applicable to your long-term goals and dreams</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "5 on step 2">
+			<h4>You have a group “video skit” project due in a week. Do you…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Use your past experience with similar projects to direct the group in this project </label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">Try to create something new, innovative, and different</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "6 on step 2">
+			<h4>You have a group “video skit” project due in a week. Do you…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="2">Think about the broad concepts and themes that you are trying to communicate through the skit</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">Start with the basic concepts (characters, setting, etc.) and build the story up from those ideas</label>
+			</form>
+		</div>
+		<div data-panel="two" data-toggle="buttons">
+			<form name = "7 on step 2">
+			<h4>Which do you most agree with?</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">I live in the present</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">I constantly think about the future</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="-1">I am very aware of my surroundings and can recall important details about my surroundings from a given moment</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" id="q" value="1">I recall my impressions of an event more so than details about the event</label>
+			</form>
+		</div>
+		<div data-panel="three" data-toggle="buttons">
+			<form name = "1 on step 3">
+			<h4>My ideal friend is someone who...</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="2">Knows my deepest darkest secrets. Someone who I can share everything with. Sharing emotions is so important!!!</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">I can just have fun with</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">I can rant to when I need to get things off my chest</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-2">Doesn’t need to get too close with me… I have a tough time trusting people </label>
+			</form>
+		</div>
+		<div data-panel="three" data-toggle="buttons">
+			<form name = "2 on step 3">
+			<h4>I consider myself to be a person who…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">Is able to empathize with others well</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">Cares deeply for people</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">Treats people with respect</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">Values the truth more than anything else</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="2">Understands my emotions and others’ emotions</label>
+			</form>
+		</div>
+		<div data-panel="three" data-toggle="buttons">
+			<form name = "3 on step 3">
+			<h4>You are sad, and have been sad for a while…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-2">Nah, doesn’t happen</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">Yup. This is me most of the time actually</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">I can usually get out of that kind of thing pretty quickly</label>
+			</form>
+		</div>
+		<div data-panel="three" data-toggle="buttons">
+			<form name = "4 on step 3">
+			<h4>How do you try to get out of it??</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">Methodically. I try something… like hanging out with people more. If I’m happier after doing it, I keep doing it. If I’m not I try something else</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">I have to process how I’m really feeling. Why am I like this? I’ll journal, reflect, and share with other people what’s going on</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">Ignore it, it’ll pass. I don’t really like thinking about my feelings</label>
+			</form>
+		</div>
+		<div data-panel="three" data-toggle="buttons">
+			<form name = "5 on step 3">
+			<h4>How do you know when you like someone?</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">My heart knows</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-1">I have a type… I may or may not have a checklist of qualities I want in my future spouse</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="-2">I think about the pros and cons of liking the person</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" id="q" value="1">I can feel the vibe, I can feel the connection</label>
+			</form>
+		</div>
+		<div data-panel="four" data-toggle="buttons">
+			<form name = "1 on step 4">
+			<h4>You are starting a passion project…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="1">Sounds like me</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-1">That never happens…</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q_answer" id="q" value="2">I’ve never had a passion…</label>
+			</form>
+		</div>
+		<div data-panel="four" data-toggle="buttons">
+			<form name = "2 on step 4">
+			<h4>How do you go about starting it?</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="2">I do as inspiration strikes</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-2">I make a schedule with deadlines. Planning is key.</label>
+			</form>
+		</div>
+		<div data-panel="four" data-toggle="buttons">
+			<form name = "3 on step 4">
+			<h4>Do you keep a schedule?</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-2">Yes! I schedule every day, I DO NOT like unexpected events, and I stick to my schedule like glue</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="0">Yes, but I don’t ever really follow it</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="1">I would like to, just too lazy</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="2">No… and I’m ok with random things happening to me. I go with the floooowww </label>
+			</form>
+		</div>
+		<div data-panel="four" data-toggle="buttons">
+			<form name = "4 on step 4">
+			<h4>Your friend group is planning a Christmas party. In your group meeting, you…</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-1">Get very irritated when the details are not well arranged</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-2">Take notes on people’s ideas, make an Excel spreadsheet to organize who is doing/buying what, <p>create a When2Meet for the next organizing meeting, try to get people to definitively decide on details for the event, etc.</p> </label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="1">Acknowledge that things are bound to change, and thus only loosely plan details of the event</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="2">Don’t usually come to these planning meetings because you don’t understand why they exist/matter</label>
+			</form>
+		</div>
+		<div data-panel="four" data-toggle="buttons">
+			<form name = "5 on step 4">
+			<h4>Which do you most identify with?</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-1">I work before I play </label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="1">I just wanna have fun!!!</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="2">Drop me in the woods with nothing. Hit me with anything. I’ll be ok.</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" id="q" value="-2">I will plan, schedule, and Excel spreadsheet until the day I die. Actually, I’m afraid of death because I can’t plan when it’s gonna happen</label>
+			</form>
+		</div>
+		<div data-panel="five" data-toggle="buttons">
+			<form name = "1 on step 5">
+			<h4>Rate how attractive you think you are (1-4 scale, 1=least, 4=most)</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-2">1</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-1">2</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="1">3</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="2">4</label>
+			</form>
+		</div>
+		<div data-panel="five" data-toggle="buttons">
+			<form name = "2 on step 5">
+			<h4>Rate how funny you think you are (1-4 scale, 1=least, 4=most)</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-2">1</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-1">2</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="1">3</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="2">4</label>
+			</form>
+		</div>
+		<div data-panel="five" data-toggle="buttons">
+			<form name = "3 on step 5">
+			<h4>Rate how kind you think you are (1-4 scale, 1=least, 4=most)</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-2">1</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-1">2</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="1">3</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="2">4</label>
+			</form>
+		</div>
+		<div data-panel="five" data-toggle="buttons">
+			<form name = "4 on step 5">
+			<h4>Rate how optimistic you think you are (1-4 scale, 1 = very pessimistic, 4 = very optimistic)</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-2">1</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-1">2</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="1">3</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="2">4</label>
+			</form>
+		</div>
+		<div data-panel="five" data-toggle="buttons">
+			<form name = "5 on step 5">
+			<h4>I think I am going to have an impact on the world someday</h4>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="2">I already am. I’m a baller.</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="1">Yes!!</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-1">Eh… maybe</label>
+			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" id="q" value="-2">No. My life is meaningless. I have no passion. Bleh.</label>
+			</form>
+		</div>
+		<div data-panel="six" data-toggle="buttons">
+			<h4>Ready to find out what type you are!</h4>
+		</div>
+	</div>
+		<button onclick="n();">Next</button>
+	<div id="final">
+		<form action="/personality" method="post" id="run">
+			<input id="val" name="result" type="hidden" value="">
+			<input id="IE" name="IE" type="hidden" value="">
+			<input id="NS" name="NS" type="hidden" value="">
+			<input id="FT" name="FT" type="hidden" value="">
+			<input id="PJ" name="PJ" type="hidden" value="">
+			<input id="UC" name="UC" type="hidden" value="">
+			<p>
+
+			</p>
+		</form>
+	</div>
+
+
+
+</div>
+    <!-- used some basic logic from https://www.w3schools.com/howto/howto_js_form_steps.asp -->
+    <script>
+    let error = false
+	let selectedIndex = 7
+    let finaln = document.querySelector("#final");
+    finaln.style.visibility = 'visible';
+    $('.form .stages label').click(function() { //this code is from the site https://codepen.io/ActiveCodex/pen/OVBeMg which we used for our form
+	var radioButtons = $('.form input:radio');
+	var selectedIndex = radioButtons.index(radioButtons.filter(':checked'));
+	selectedIndex = selectedIndex + 1;
+    });
+
+    $('.form button').click(function() {
+	var radioButtons = $('.form input:radio');
+	var selectedIndex = radioButtons.index(radioButtons.filter(':checked'));
+
+	selectedIndex = selectedIndex + 2;
+
+	$('.form input[type="radio"]:nth-of-type(' + selectedIndex + ')').prop('checked', true);
+	if (selectedIndex >= 6) {
+		$('button').html('Submit');
+	}
+	else {
+		$('button').html('Next');
+	}
+	if (selectedIndex != 7) {
+	let finaln = document.querySelector("#final");
+    finaln.style.visibility = 'hidden';
+	}
+
+	if (selectedIndex >= 7) { //This is checking the selected index and then checking to see if all of the values have been checked
+		let inputnumb = document.getElementsByTagName('input')
+		console.log(inputnumb)
+		for (i=0; i<document.forms.length-1; i++) {
+			c = 0;
+			for (k=0; k<document.forms[i].length; k++) {
+				console.log(document.forms[i]["q1"])
+				if (document.forms[i][k].checked) {
+					c = 1;
+					console.log("checked")
+				}
+			}
+			if (c != 1) {
+				alert("You need to complete question " + document.forms[i].name)
+				error = true;
+				s = 1;
+				break
+			}
+			error = false;
+		}
+
+		var check1 = document.getElementsByName("q1");
+		var check2 = document.getElementsByName("q2");
+		var check3 = document.getElementsByName("q3");
+		var check4 = document.getElementsByName("q4");
+		var check5 = document.getElementsByName("q5");
+    	let IE = 0; // Setting empty variables for each personality value
+    	let NS = 0;
+    	let FT = 0;
+    	let PJ = 0;
+    	let UC = 0;
+    	let IEL = 0; // Setting empty variables for each personality letter
+    	let NSL = 0;
+    	let FTL = 0;
+    	let PJL = 0;
+    	let UCL = 0;
+    	let i1 = 0; // setting counters (i later discovered more efficient ways in solving the issue of checking every input to see if it was checked)
+    	let i2 = 0;
+    	let i3 = 0;
+    	let i4 = 0;
+    	let i5 = 0;
+		while (i1<check1.length) { //Checking for the first value in sequence
+			if (check1[i1].checked) {
+				IE = IE + parseInt(check1[i1].value, 10);
+			}
+			i1++;
+		}
+		if (IE >= 0) {
+				IEL = "E"
+			}
+		else if (IE < 0) {
+				IEL = "I"
+			}
+		console.log(IE);
+		while (i2<check2.length) { //Checking for the second value in sequence
+			if (check2[i2].checked) {
+				NS = NS + parseInt(check2[i2].value, 10); //adding the values that are checked to the variable
+			}
+			i2++;
+		}
+		if (NS >= 0) {
+				NSL = "N"
+			}
+		else if (NS < 0) {
+				NSL = "S"
+			}
+		console.log(NS);
+		while (i3<check3.length) {
+			if (check3[i3].checked) {
+				FT = FT + parseInt(check3[i3].value, 10);
+			}
+			i3++;
+		}
+		if (FT >= 0) {
+				FTL = "F"
+			}
+		else if (FT < 0) {
+				FTL = "T"
+			}
+		console.log(FT);
+		while (i4<check4.length) {
+			if (check4[i4].checked) {
+				PJ = PJ + parseInt(check4[i4].value, 10);
+			}
+			i4++;
+		}
+		if (PJ >= 0) {
+				PJL = "P"
+			}
+		else if (PJ < 0) {
+				PJL = "J"
+			}
+		console.log(PJ);
+		while (i5<check5.length) {
+			if (check5[i5].checked) {
+				UC = UC + parseInt(check5[i5].value, 10);
+			}
+			i5++;
+		}
+		if (UC >= 0) {
+				UCL = "C"
+			}
+		else if (UC < 0) {
+				UCL = "U"
+			}
+		console.log(UC);
+	document.getElementById("val").value = IEL + NSL + FTL + PJL + UCL; //Inserting sequence into the hidden input that will later be posted
+	document.getElementById("IE").value = IE;
+	document.getElementById("NS").value = NS;
+	document.getElementById("FT").value = FT;
+	document.getElementById("PJ").value = PJ;
+	document.getElementById("UC").value = UC;
+	console.log(selectedIndex)
+	console.log(error)
+
+
+	}
+	$('.form button').click(function() {
+		console.log("does this work?")
+		if (error == true || selectedIndex < 6) {
+
+		}
+		// console.log("does this work?") "test code"
+		if (selectedIndex >= 6) { //this is checking to make sure we are on the right step which should be the sixth step
+			//console.log("how bout now?") "test code"
+			if (error == false) { //this is to make sure there were no errors in missing questions
+				console.log("truefalse?")
+				document.getElementById("run").submit(); //Posting the form from the click function
+
+
+		}
+	}
+	});
+    });
+
+
+    </script>
+
+ </html>

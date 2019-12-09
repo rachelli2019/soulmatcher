@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Match Choice
+{% endblock %}
+
+{% block main %}
+	<style>
+        body {
+            /* gif from https://giphy.com/gifs/gustavo-loop-kidmograph-T9lWudzRdXIE8/links */
+            background-image: url(https://media.giphy.com/media/l3vRjkliOdY22VlS0/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+    <div class ="form">
+    <div class="form-group">
+        <h1>
+            How would you like to create your match?
+        </h1>
+        <div data-toggle="buttons">
+			<form action="/matchchoice" method="post" id="run">
+				<h4>Choose the option you would prefer</h4>
+					<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="c" id="q" value="similar" onclick="check();">I want to be matched with someone with a similar personality</label>
+					<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="c" id="q" value="ideal" onclick="check();">I want to fill out a personality form for my desired match</label>
+					<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="c" id="q" value="soulmatch" onclick="check();">Soulmatch! (RECOMMENDED)</label>
+					<input id="choice" name="choice" type="hidden" value="">
+				<p id="hide">
+				    <button class="btn btn-outline-info" onclick="check();">Submit!</button>
+				</p>
+			</form>
+		</div>
+    </div>
+    </div>
+    <script>
+    	function check() {
+    		let hide = document.querySelector("#hide");
+			hide.style.visibility = 'visible';
+    		var choice = 0;
+    		var checked = false;
+	    	var value = document.getElementsByName("c");
+	    	for (i=0; i<3; i++) {
+					if (value[i].checked) { //checking which value is checked and then setting the value
+						var checked = true;
+						choice = value[i].value;
+				}
+			}
+			if (checked == false) {
+				//error message
+			}
+			document.getElementById("choice").value = choice; //setting value to hidden input in the form
+			document.getElementById("run").submit(); //submitting form
+    	}
+
+
+    </script>
+{% endblock %}

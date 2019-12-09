@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dealbreakers
+{% endblock %}
+
+{% block main %}
+    <style>
+         body {
+            /* gif from https://giphy.com/gifs/gustavo-loop-kidmograph-T9lWudzRdXIE8/links */
+            background-image: url(https://media.giphy.com/media/l3vRjkliOdY22VlS0/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+    <div class="form">
+    <h2>Let's find your ideal type! Fill out your dealbreakers below!</h2>
+    <p> </p>
+
+    <form action="/dealbreaker" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="agemax" placeholder="Age Max" type="number" min="1" required>
+            <input autocomplete="off" autofocus class="form-control" name="agemin" placeholder="Age Min" type="number" min="1" required>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="heightmax" placeholder="Height Max (inches)" type="number" min = "1" required>
+            <input autocomplete="off" class="form-control" name="heightmin" placeholder="Height Min (inches)" type="number" min = "1" required>
+        </div>
+        <h4>Needs to be clean!</h4>
+        <div class="form-group">
+            <select id = "clean" name="clean">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

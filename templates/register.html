@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <style>
+        body {
+            /* gif from https://giphy.com/gifs/gustavo-loop-kidmograph-T9lWudzRdXIE8/links */
+            background-image: url(https://media.giphy.com/media/T9lWudzRdXIE8/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+        <button class="btn btn-outline-info" type="submit">Register</button>
+    </form>
+{% endblock %}

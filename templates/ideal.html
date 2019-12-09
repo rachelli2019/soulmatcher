@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ideal Type
+{% endblock %}
+
+{% block main %}
+ <style>
+         body {
+            /* gif from https://giphy.com/gifs/gustavo-loop-kidmograph-T9lWudzRdXIE8/links */
+            background-image: url(https://media.giphy.com/media/l3vRjkliOdY22VlS0/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+    <div class="form">
+    	<h1>Fill out your ideal type!</h1>
+    <div class="form-group">
+        <div data-toggle="buttons">
+    		<form name = "1">
+    			<h4>You and your partner have a free night and you ask your partner what they want to do. What do you want them to say?</h4>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="H">Go to a party</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="L">Stay at home</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q1" value="M">Go out to grab some food</label>
+    		</form>
+    	</div>
+    	<div data-toggle="buttons">
+    		<form name = "2">
+    			<h4>You are sad. What do you want your partner to do to make you feel better?</h4>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" value="L">Talk to you and use logic to try to figure out solutions to your problems</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" value="M">Listen to you talk</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q2" value="H">Cry with you bc we are all sadbois :(</label>
+    		</form>
+    	</div>
+    	<div data-toggle="buttons">
+    		<form name = "3">
+    			<h4>You and your partner have decided to start renovating your house. Do you want someone who…</h4>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" value="L">Makes a schedule with deadlines, creates an Excel spreadsheet with all the contractors, <p> brings back paint samples from Home Depot, etc.</p> </label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" value="H">Allows you to take the initiative </label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q3" value="M">Not really sure what to do, but down to either plan or let you do the planning</label>
+    		</form>
+    	</div>
+    	<div data-toggle="buttons">
+    		<form name = "4">
+    			<h4>The planning for your amazing new house begins. Would you rather have someone who…</h4>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" value="H">Has a grand vision for the house, but doesn’t necessarily know what to do to accomplish it</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" value="L">Doesn’t really have any idea of what they want the house to be like, <p>but understands the details that are needed to get things done </p></label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q4" value="<">Doesn’t really have a vision or know the clear details of how to accomplish this task, <p>but is willing to understand your vision and help you in the implementation </p></label>
+    		</form>
+    	</div>
+    	<div data-toggle="buttons">
+    		<form name = "5">
+    			<h4>Your significant other has been challenged to a 1v1 basketball match. Do you want someone who…</h4>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" value="H">Thinks they will win 100% bc they are confident in their skills</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" value="L">Thinks they will lose because they admire the other person’s skills</label>
+    			<label class="element-animation1 btn btn-lg btn-outline-info btn-block"><input type="radio" name="q5" value="M">Doesn’’t really care but just there to have a good time</label>
+    		</form>
+		</div>
+		<button class="btn btn-outline-info" onclick = "check1();">Submit</button>
+		<div id = "run1">
+		    <form action="/ideal" method="post" id="run">
+        		<input id="q1I" name="q1I" type="hidden" value="">
+        		<input id="q2I" name="q2I" type="hidden" value="">
+        		<input id="q3I" name="q3I" type="hidden" value="">
+        		<input id="q4I" name="q4I" type="hidden" value="">
+        		<input id="q5I" name="q5I" type="hidden" value="">
+    		<p>
+    		    <button class="btn btn-outline-info" type="submit">Submit</button>
+    		</p>
+
+            </form>
+		</div>
+    </div>
+    </div>
+    <script>
+        let run1 = document.querySelector("#run1");
+		run1.style.visibility = 'hidden';
+    	function check1() {
+
+    		var choice = 0;
+    		var checked = false;
+    		a = [] //creating an empty array
+	    	var s1 = document.getElementsByName("q1");
+	    	var s2 = document.getElementsByName("q2");
+	    	var s3 = document.getElementsByName("q3");
+	    	var s4 = document.getElementsByName("q4");
+	    	var s5 = document.getElementsByName("q5");
+	    	for (i=0; i<document.forms.length-1; i++) {
+	    	    checked = false;
+    	    	for (j=0; j<3; j++) {
+    					if (document.forms[i][j].checked) { //checking each value within each indexed form
+    						checked = true;
+    						choice = document.forms[i][j].value; //setting the variable
+    						a.push(choice); //appending to the array
+    				}
+    			}
+                    	if (checked == false) {
+    				        alert("Finish question " + (parseInt(i, 10) + 1));
+    				        break
+                    	}
+    			}
+    			if (checked == true) { // if the values are checked
+    			    //console.log(a) used this for testing purposes
+        			document.getElementById("q1I").value = a[0]; //assigning all of the values
+            		document.getElementById("q2I").value = a[1];
+            		document.getElementById("q3I").value = a[2];
+            	    document.getElementById("q4I").value = a[3];
+            		document.getElementById("q5I").value = a[4];
+    	        	document.getElementById("run").submit(); //submitting the form
+    			}
+
+
+	    	}
+    </script>
+{% endblock %}
